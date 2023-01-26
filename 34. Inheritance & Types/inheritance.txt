@@ -1,0 +1,24 @@
+Inheritance
+
+    - Reusability is an important feature of OOP
+    - In C++ we can reuse a class and add additional features to it.
+    - Easier testing and debugging.
+    - The existing class is called Base Class and the class inheriting from the Base Class is called     
+      Derived class.
+
+    - Types of Inheritance:-
+        1. Single
+        2. Multiple
+        3. Hierarchical
+        4. Multilevel
+        5. Hybrid
+    
+    - Single Inheritance: One Derived class with only one Base class.
+
+    - Multiple Inheritance: One Derived class with multiple(more than one) Base classes.
+
+    - Hierarchical Inheritance: Several Derived classes from a single Base class.
+
+    - Multilevel Inheritance: Deriving a class from an already Derived class.
+
+    - Hybrid Inheritance: is a combination of Multiple and Multilevel Inheritance.

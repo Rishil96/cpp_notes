@@ -1,0 +1,12 @@
+Virtual Base class
+
+- Suppose, we have a base class A with a data member (a). 
+- Now classes B and C are derived from A and both inherit the data member from A class, so both B and C
+  have a member (a). 
+- Now, we derive another class D from B and C. 
+- Here, both B and C have member a so when D derives from B and C it will receive 2 instances of member a
+  one from each B and C.
+- This is a problem as we don't need 2 instances of member a for D class.
+- So, we must make the class A as virtual base class while creating classes B and C to solve this problem.
+- Syntax: class B : virtual public A {};
+- This means we created D by indirectly inheriting from A as virtual base class.

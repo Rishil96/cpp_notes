@@ -1,0 +1,33 @@
+Object Oriented Programming
+
+    - OOP : is a way/approach of writing programs
+    - C++ was designed with the intention to add OOP features to C language
+    - Creator of C++ : Bjarne Stroustrup
+    - C++ was earlier called "C with classes"
+    - Creating a class is like creating a datatype
+    - Class is a template to create objects.
+ 
+Basic Concepts of OOP
+ 
+    1. Classes: Basic template for creating objects.
+    
+    2. Objects: Basic run time entities.
+    
+    3. Data Abstraction: means displaying only essential information and hiding the background details and implementation. 
+    
+    4. Data Encapsulation: Wrapping data and functions into single unit to make sure that "sensitive" data  hidden from users.
+    
+    5. Inheritance: Properties of one class can be inherited to others.
+    
+    6. Polymorphism: ability to take more than one forms. Function overloading is an example.
+    
+    7. Dynamic Binding: code which will execute is not known until the program runs. Example, executing some code depending on what the user gives as input.
+    
+    8. Message Passing: Object.message(Information) call format.
+
+Benfits of OOP
+
+    1. Better code reuseability using objects and inheritance.
+    2. Principle of data hiding helps build secure systems.
+    3. Multiple objects can co-exist without any interference.
+    4. Software complexity can be easily managed.
