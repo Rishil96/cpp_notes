@@ -85,3 +85,17 @@
 
 - **Reference Variables**: are the variables that refer to some other variable. For e.g. **int y = &x**.
 - &x gives the address of variable x to y. Now y refers to the same address as x so if we change the value of x, y will also change as they both refer to the same address in memory.
+
+***
+
+### **Constants, Manipulators & Operator Precedence**
+
+- We can create a constant using const keyword. For e.g., **const int a = 10;**
+- Once declared, the value of constant cannot be changed.
+- **Manipulators:** are functions that help to format the data while displaying it on the console.
+- Example, setw() belongs to the iomanip header file, which helps us to set how many spaces should it take to print the data.
+- **Operator Precedence:** tells us which operations will get the higher priority among multiple operations in an expression.
+- **Link: https://en.cppreference.com/w/cpp/language/operator_precedence**
+
+***
+
