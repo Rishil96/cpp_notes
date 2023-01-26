@@ -64,4 +64,24 @@
 
 ### **Reference Variables & Typecasting**
 
-- 
+- **Type casting** refers to the conversion of one data type to another in a program. 
+- Typecasting can be done in two ways: automatically by the compiler and manually by the programmer or user. 
+- Type Casting is also known as **Type Conversion**.
+- Type Casting is only possible when both data types are compatible with each other.
+- **Types of Type Casting are:-**
+
+    **1. Implicit Typecasting:-**
+        - It is known as the automatic type casting.
+        - It is automatically converted from one data type to another without any external intervention such as programmer or user. 
+        - It means the compiler automatically converts one data type to another.
+        - All data type is automatically upgraded to the largest type without losing any information.
+    
+    **2. Explicit Typecasting:-**
+        - It is also known as the manual type casting in a program.
+        - It is manually cast by the programmer or user to change from one data type to another type in a program. - It means a user can easily cast one data to another according to the requirement in a program.
+        - It does not require checking the compatibility of the variables.
+        - In this casting, we can upgrade or downgrade the data type of one variable to another in a program.
+        - It uses the cast () operator to change the type of a variable. E.G. (float) 21/5
+
+- **Reference Variables**: are the variables that refer to some other variable. For e.g. **int y = &x**.
+- &x gives the address of variable x to y. Now y refers to the same address as x so if we change the value of x, y will also change as they both refer to the same address in memory.
