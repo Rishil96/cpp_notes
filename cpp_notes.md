@@ -99,3 +99,35 @@
 
 ***
 
+### **Control Structures**
+
+- There are 3 types of control structures in C++:-
+
+    1. **Sequence Structure :** a regular program with entry, multiple instructions and end.
+    2. **Selection Structure :** a program with with condition on the basis of which next instruction will either be executed or not.
+    3. **Loop Structure :** a program where an instruction is executed a certain number of times repeatedly.
+
+- 2 types of Selection Structures are if-else and switch-case.
+    1. **if else else-if :** here if statement will check a condition, if it is true the if block will be executed or else it will move on to check the else-if and else blocks, if any condition is true the respective block is executed.
+    2. **switch case :** in switch case, the condition is a single variable or data, it is not an expression. Multiple cases can be written for a specific value and a default case can also be written in case of any other cases not being true.
+
+***
+
+### **Loop Structures**
+
+- 3 types of loops are:-
+    **1. For loop :** Syntax is :- **for (initialization; condition; updation){ }**. **Initialization** is where we initialize a variable for the loop or just use a variable that is already initialized in the namespace. **Condition** is the expression that will keep the loop running till it is not False. **Updation** is the increment or decrement operation after every loop.  
+
+    **2. While loop :** In while statement, we give a conditional expression, as long as the condition returns true, the while loop keeps getting executed. Increment or decrement should be done manually inside the while block.
+
+    **3. Do-While loop:** In do while loop, the code block is written first and while condition is written at the end. This basically ensures that the block is executed atleast once even if the condition is False from the beginning.
+
+***
+
+### **Break and continue**
+
+- **break :** is used to exit any of the above loop. Use it to forcefully exit the loop if a certain condition is met.
+- **continue :** is used to stop execution of the current iteration and begin the next iteration of the loop. Basically, it is like a skip button which can be used to skip a specific iteration or iterations based on specific conditions.
+
+***
+
