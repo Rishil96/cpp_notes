@@ -130,5 +130,3 @@
 - **continue :** is used to stop execution of the current iteration and begin the next iteration of the loop. Basically, it is like a skip button which can be used to skip a specific iteration or iterations based on specific conditions.
 
 ***
-
-# HI SHAWN
