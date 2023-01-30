@@ -150,3 +150,35 @@
 ***
 
 ### **Arrays and Pointers**
+
+- is a collection of items(data types) of similar type.
+- In computer memory, array is a continuous block of memory.
+- To create an array, we simply use **[]** after the variable name saying that this variable will contain more than one value for the mentioned data type.
+- We can also provide an integer inside **[]** to specify the number of items the array will hold which will tell the compiler to block the amount of memory in a contiguous manner required for the number of data elements we mentioned.
+- To initialize an array, we add data elements inside **{}**.
+```
+    int array[4] = {1, 2, 3, 4};    // No. of elements specified.
+    int array[] = {1, 2};           // Without specifying no. of 
+                                       elements.
+```
+- To access, update a specific element, we use its index. Eg:- 
+```
+    cout << array[2];   // access element
+    array[2] = 10;      // update element
+```
+- We can create pointers to loop through an array.
+- Pointer Arithmetic Formula : 
+
+>**new_address = current_address + i \* sizeof(datatype)**
+
+>where i is the number of addresses we want to move ahead from the current address. This only works because of the nature of arrays i.e. being stored in a contiguous memory.
+
+```
+    int numbers[];          // array
+    int *ptr = numbers;     // pointer that stores the starting 
+                               address of the array (address of
+                               the first element).
+```
+
+- we can use **sizeof(variable_name)** to check the size of a specific variable or a datatype. Could be specially useful when creating derived and user defined datatypes.
+
