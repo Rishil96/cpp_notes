@@ -130,3 +130,23 @@
 - **continue :** is used to stop execution of the current iteration and begin the next iteration of the loop. Basically, it is like a skip button which can be used to skip a specific iteration or iterations based on specific conditions.
 
 ***
+
+### **Pointers**
+
+- A pointer is a variable/datatype that stores the address of other variables/datatypes.
+- To get a variable's address, we use **&** before the variable name, and to create a pointer, we use **\*** before the pointer name.
+- We also specify the data type to the pointer which is same as the variable it is pointing to.
+- **&** is called the **(address of) operator**.
+- **\*** is called the **Dereference operator**. It is used while creating a pointer and later on we can use it to dereference (meaning get the value at that address) the pointer.
+- **Pointer to Pointer** is a pointer that stores the address of another pointer. To create it we use **\*\*** before the pointer name.
+- Example of how to define a pointer:
+```
+    int a = 5;      // Integer variable a
+    int *b = &a;    // Int Pointer b pointing to the address of a.
+    int **c = &b;   // Pointer to pointer c pointing to the
+                       address of pointer b.
+```
+
+***
+
+### **Arrays and Pointers**
