@@ -2,7 +2,7 @@
 
 ***
 
-### **Basic Structure of a C++ Program**
+## **Basic Structure of a C++ Program**
 
 - int main() is the starting point of a program.
 - int tells us that at the end, an integer output should be returned if the program is executed successfully.
@@ -14,7 +14,7 @@
 
 ***
 
-### **Variables and Comments**
+## **Variables and Comments**
 
 - we can think of variables as a container that holds data.
 - In reality, when we create a variable, we assign a name i.e. the variable name, to a particular location in memory(RAM), so that we can access that location again using the variable name to get back the data we previously stored there.
@@ -23,7 +23,7 @@
 
 ***
 
-### **Variable Scopes and Datatypes**
+## **Variable Scopes and Datatypes**
 
 - Data types are categorized into 3 types:-
     1. Built in datatype
@@ -50,7 +50,7 @@
 
 ***
 
-### **Basic Input/Output**
+## **Basic Input/Output**
 
 - In C++ sequence of bytes corresponding to input and output are commonly called as **streams**.
 - **Input Stream:** Direction of flow of bytes takes place from I/P device (keyboard) to the main memory.
@@ -62,7 +62,7 @@
 
 ***
 
-### **Reference Variables & Typecasting**
+## **Reference Variables & Typecasting**
 
 - **Type casting** refers to the conversion of one data type to another in a program. 
 - Typecasting can be done in two ways: automatically by the compiler and manually by the programmer or user. 
@@ -88,7 +88,7 @@
 
 ***
 
-### **Constants, Manipulators & Operator Precedence**
+## **Constants, Manipulators & Operator Precedence**
 
 - We can create a constant using const keyword. For e.g., **const int a = 10;**
 - Once declared, the value of constant cannot be changed.
@@ -99,7 +99,7 @@
 
 ***
 
-### **Control Structures**
+## **Control Structures**
 
 - There are 3 types of control structures in C++:-
 
@@ -113,7 +113,7 @@
 
 ***
 
-### **Loop Structures**
+## **Loop Structures**
 
 - 3 types of loops are:-
     **1. For loop :** Syntax is :- **for (initialization; condition; updation){ }**. **Initialization** is where we initialize a variable for the loop or just use a variable that is already initialized in the namespace. **Condition** is the expression that will keep the loop running till it is not False. **Updation** is the increment or decrement operation after every loop.  
@@ -124,14 +124,14 @@
 
 ***
 
-### **Break and continue**
+## **Break and continue**
 
 - **break :** is used to exit any of the above loop. Use it to forcefully exit the loop if a certain condition is met.
 - **continue :** is used to stop execution of the current iteration and begin the next iteration of the loop. Basically, it is like a skip button which can be used to skip a specific iteration or iterations based on specific conditions.
 
 ***
 
-### **Pointers**
+## **Pointers**
 
 - A pointer is a variable/datatype that stores the address of other variables/datatypes.
 - To get a variable's address, we use **&** before the variable name, and to create a pointer, we use **\*** before the pointer name.
@@ -149,7 +149,7 @@
 
 ***
 
-### **Arrays and Pointers**
+## **Arrays and Pointers**
 
 - is a collection of items(data types) of similar type.
 - In computer memory, array is a continuous block of memory.
@@ -182,3 +182,83 @@
 
 - we can use **sizeof(variable_name)** to check the size of a specific variable or a datatype. Could be specially useful when creating derived and user defined datatypes.
 
+***
+
+## **Structures, Unions and Enum** 
+
+- There are 3 User-defined datatypes in C++:-
+> - Structures
+> - Unions
+> - Enums
+
+- **Structures** are used to combine items of different datatypes.
+```
+    // Example of Structures
+    typedef struct employee
+    {
+        int empID;
+        char initials;
+        float salary;
+        bool isHappy;
+    } emp;
+```
+- **typedef** is used to provide an alias name to the structures as done in the above example. Alias name comes at the end.
+- Creating a structure will take up the total memory required for all the datatypes included in the structure combined.
+- The above structure will take **4(int) + 1(char) + 4(float) + 1(bool) = 10 bytes**.
+
+- **Unions** are same as structures but provide better memory management.
+```
+    // Example of Union
+    union money 
+    {
+    int rupees;
+    float dollars;
+    char crypto;
+    };
+```
+- In a union, only one value can be set at a time.
+- It is used when we need multiple choices/options but will be using only one of the available choices at a time.
+- Since, only one option will be used, creating a union will take up only the space required to store the value with the most memory.
+- In the above example, float has the highest memory 4 bytes, so the union will be created by allocating 4 bytes of memory to it.
+
+- **Enum** is kind of a list that is used to enumerate the items of that list.
+- Every value in an enum will be alloted an integer value starting with 0.
+
+```
+    enum Meal {Breakfast, Lunch, Dinner};
+    cout << "Value of Breakfast: " << Breakfast << endl; // 0
+    cout << "Value of Lunch: " << Lunch << endl;         // 1
+    cout << "Value of Dinner: " << Dinner << endl;       // 2
+
+    // Create a variable using enum
+    Meal meal1 = Dinner;
+    cout << "Meal 1: "  << meal1 << endl;                // 2
+```
+- The created enum can also act as a datatype and we can perform conditional operations and create variables from it.
+
+***
+
+## **Functions & Function Prototypes**
+
+- A **function** is a block of code or a set of instructions that is only executed when it is called.
+
+```
+    // Function to add 2 numbers
+    int sum(int a, int b) {
+        int c = a + b;
+        return c;
+    }
+```
+- A **Function Prototype** basically tells the compiler to look for the function before running so that if it is written after the main function, it can still be used.
+- Basically, it is declaring a function before defining(writing the code/instructions) it.
+- To declare a function, we simple write the datatype, function name and the parameters it will take.
+```
+    // 2 function prototypes below
+    
+    int subtract(int a, int b);
+    void greet();
+```
+- After declaring the functions as shown above, we can write those functions anywhere in the file, even after the main function and the compiler will first find where it is located, only after then it will be executed.
+- void can be used as a datatype to a function when we don't want to return any value from that function.
+
+***
