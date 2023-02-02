@@ -262,3 +262,73 @@
 - void can be used as a datatype to a function when we don't want to return any value from that function.
 
 ***
+
+## **Call by Value & Call by Reference**
+
+- The variables inside a function are destroyed after function completes its execution.
+- When variables are passed as parameters in a function a copy is sent to the function and not the actual variable. 
+- So any operation on the variable itself will not take place as the operation is done on a copy of the variable.
+- When we pass variables as parameters to a function, it basically creates a copy of those values and performs the instructions in the function. This is called "Call by Value" as we are simply using the value of those parameters.
+- But when we want to use the actual variables instead of making a copy of them we need to use "Call by Reference". Which simply means we pass pointers or address references to the function parameters which then directly gets access to the memory location of the variables.
+```
+    // Swap variable values using Pointers
+    void swapPointer(int* a, int* b) {
+    int temp = *a;
+    *a = *b;
+    *b = temp;
+    }
+
+    swapPointer(&a, &b);
+
+
+    // Swap variable values using References
+    void swapReferenceVar(int &a, int &b) {
+    int temp = a;
+    a = b;
+    b = temp;
+    }
+
+    swapReferenceVar(a, b);
+
+```
+- When we use reference variables, we only pass the variables to the function, the function directly uses **&** in the parenthesis to access its address.
+- In case of pointers, we have to pass the address of the variables to the function parameters as the function accepts only pointers, and pointers only stores addresses of variables.
+
+***
+
+## **Inline Functions, Default & Constant Arguments**
+
+- When we write a function, multiple steps are executed even other than the function logic. 
+- If a function is used a lot of times in a program, it makes sense for it to be stored in memory so those steps need not be executed again and again.
+- These functions that are stored in memory are called inline functions.
+- If we use inline, then the compiler places the function in the main function call itself during compilation so it won't go through the previously listed steps during runtime.
+- Basically where the function is called in the main code, the function(stored in memory) is replaced with the function call which kind of beats the purpose of reuseability of functions but it makes the code faster.
+- This takes up space in memory so inline functions is only suggested to use in case of very small functions typically with 1 operation. 
+- Making large functions inline will result in taking up more memory in cache and will risk running out of memory (RAM).
+
+```    
+    inline int product(int a, int b) {
+    return a*b;
+    }
+```
+- **Static :** if a variable is initialized with static keyword, it will run only once per execution.
+- So, if a static variable in declared in a function or class, only during the first time when the function/class is called it will execute. When the function is called again (no matter how many times), it will not run again.
+- Particularly useful to make counter varaibles inside a function/class. (In Python, we do this by creating class attributes instead of object attributes)
+
+- **Default Arguments :** are the arguments in the function that has a default value due to which it is not compulsory to give a value for that parameter when calling that function.
+```
+    // interest is parameter which has a default value.
+
+    float calculateInterest(float amount, float interest = 1.04) {
+    return amount * interest;
+    }
+``` 
+- Default Arguments should always be written towards the end of the arguments list in a function.
+- **Constant variables :** we pass the arguments with a const keyword so that the function does not change the value of the passed variable. Best used with reference variables and pointers.
+```
+int strlen(const char *p) {
+// function logic
+}  Here *p won't be allowed to update in the function.
+```
+
+***
