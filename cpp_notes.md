@@ -332,3 +332,52 @@ int strlen(const char *p) {
 ```
 
 ***
+
+## **Recursion & Recursive Functions**
+
+- Recursion means calling a function again and again inside itself till a certain condition is met.
+- Kind of like a while loop but gives more functionality.
+
+```
+    // Recursive function for factorial
+    int factorial(int n) {
+    if (n <= 1){
+        return 1;
+    }
+    return n * factorial(n - 1);
+    }
+```
+- A recursive function contains 3 parts:-
+    - **Base Case:** condition to stop recursion.
+    - **Recursive Case:** where function calls itself again.
+    - **Calculation:** small calculation that reduces the problem size making it move closer to the base case.
+
+***
+
+## **Function Overloading**
+
+- **Function Overloading :** is a feature of OOP where 2 functions/methods have the same name but different parameters. 
+- So the functions with single name can do multiple tasks depending on the number of arguments provided.
+
+```
+    // Cylinder
+    float volume(float r, float h) {
+        return (3.14 * r * r * h);
+    }
+
+    // Cuboid
+    float volume(float l, float b, float h) {
+        return (l * b *h);
+    }
+
+    // Cube
+    float volume(float a) {
+        return (a * a * a);
+}
+```
+
+- In above example, the function volume is overloaded and has 3 functionalities.
+- Depending on the number of arguments provided as inputs, the respective function will be used by the C++ compiler and it won't throw an error.
+- C++ is intelligent enough to figure out which function to use in which case.
+
+***
