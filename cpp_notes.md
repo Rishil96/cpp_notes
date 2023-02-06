@@ -381,3 +381,77 @@ int strlen(const char *p) {
 - C++ is intelligent enough to figure out which function to use in which case.
 
 ***
+
+## **OOP & Classes**
+
+    - OOP : is a way/approach of writing programs
+    - C++ was designed with the intention to add OOP features to C language
+    - Creator of C++ : **Bjarne Stroustrup**
+    - C++ was earlier called **"C with classes"**
+    - Creating a class is like creating a datatype
+    - Class is a template to create objects.
+
+### **Basic Concepts of OOP**
+
+    1. **Classes:** Basic template for creating objects.
+        
+    2. **Objects:** Basic run time entities.
+
+    3. **Data Abstraction:** means displaying only essential information and hiding the background details and implementation. 
+
+    4. **Data Encapsulation:** Wrapping data and functions into single unit to make sure that "sensitive" data  hidden from users.
+
+    5. **Inheritance:** Properties of one class can be inherited to others.
+
+    6. **Polymorphism:** ability to take more than one forms. Function overloading is an example.
+
+    7. **Dynamic Binding:** code which will execute is not known until the program runs. Example, executing some code depending on what the user gives as input.
+
+    8. **Message Passing:** Object.message(Information) call format.
+
+### **Benfits of OOP**
+
+    1. Better code reuseability using objects and inheritance.
+    2. Principle of data hiding helps build secure systems.
+    3. Multiple objects can co-exist without any interference.
+    4. Software complexity can be easily managed.
+
+- Difference between Structures and classes
+- Data is not protected in structures. All members can be directly accessed.
+- Functions/methods cannot be written in a structure
+- Use struct when we only need to hold data. Use class when data needs to be protected and/or functions are needed in it.
+
+### **Access Specifiers**
+
+Access Specifiers in C++. There are 3 types:-
+- **Public :** members are accessible outside the class.
+- **Private :** members cannot be viewed or accessed outside the class.
+- **Protected :** members cannot be accessed outside the class, but can be accessed from inherited class.
+
+### **Ways to write a method/member function**
+
+- Methods of a class can be written inside or outside the class.
+- To write a function/ method outside the class, it must be declared inside the class.
+- **:: is the scope resolution operator :** tells the compiler to which namespace or class the symbol/function belongs to.
+
+### **Additional points to remember**
+
+- It is possible to declare objects along with class declaration.
+```
+    class Employee{
+         // class methods and properties
+    } rishil, ashwin;
+```
+- By default, the members of a class are private. If we want any members to be public, then we must specify it using public keyword.
+
+***
+
+## **Memory Allocation & Arrays**
+
+- In C++, the **member functions** of a class is common for all objects of that all so it is assigned only once in the memory. 
+
+- But the variables of a class will differ from object to object so it is assigned different memory for different objects. 
+
+- C++ compiler does this on its own without any human intervention.
+
+- In C++, the methods of a class are commonly referred to as **member functions**.
