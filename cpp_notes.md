@@ -455,3 +455,75 @@ Access Specifiers in C++. There are 3 types:-
 - C++ compiler does this on its own without any human intervention.
 
 - In C++, the methods of a class are commonly referred to as **member functions**.
+
+***
+
+## **Static Data Members & Methods**
+
+- Static members are class variables that are initialized only once in a program execution.
+- For example, if we have a class A and it has a static member s, and if we create 4 objects from class A, the static member will be declared only while creating the first object.
+- A good example would be a count variable to keep a count of the number of objects created.
+- By default, if a value is not assigned to a static variable, it is 0.
+- To create a static variable, we first declare it inside the class using static keyword.
+- After that, we also have to associate the static variable/method using scope resolution operator outside the class(compulsory step).
+- Static variable won't be reset for every object that is created.
+- Static functions are created the same way as static variables.
+- Static functions only have access to the static variables i.e. class variables.
+
+```
+    class Employee
+    {
+    
+    static int count;   // static var declaration
+
+    public:
+        
+        static void getCount(void); // static function declaration
+
+    };
+
+    // Count is the static data member of the class Employee
+    int Employee :: count;   // Default value is 0
+
+    // Static member functions
+    void Employee :: getCount(void) {
+        cout << "\nThe number of Employees in the class is " << count;
+    };
+```
+
+***
+
+## **Array of Objects & Objects as Function Arguments**
+
+- Classes are basically customized data types.
+- Creating an array of objects is same as creating an array of any other data types like integer, float, etc.
+- **Syntax : class_name var_name[no_of_objects];**
+- It is possible to create a member function that takes the same class's objects as arguments to perform operations.
+
+```
+    class Complex
+    {
+        // It is not a good programming practice keep keep 
+        data members/variables as public
+        int a;
+        int b;
+
+        public:
+            void setData(int num1, int num2) {
+                a = num1;
+                b = num2;
+            }
+
+            // This member function is using the Class object 
+            as arguments
+            void setDataBySum(Complex o1, Complex o2) {
+                a = o1.a + o2.a;
+                b = o1.b + o2.b;
+            }
+
+            void printNumber(void) {
+                cout << "Your complex number is: " << a << "+" << b << "i" << endl;
+            }
+
+    };
+```

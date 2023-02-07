@@ -35,7 +35,7 @@ int Employee :: count;   // Default value is 0
 // Static member functions
 void Employee :: getCount(void) {
     cout << "\nThe number of Employees in the class is " << count;
-};
+}
 
 int main() {
 
