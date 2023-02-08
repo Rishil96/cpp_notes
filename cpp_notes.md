@@ -527,3 +527,109 @@ Access Specifiers in C++. There are 3 types:-
 
     };
 ```
+
+## **Friend Functions**
+
+- A friend function is a function that is not a member function of a class but it is allowed to use the private members of a particular class.
+- Properties of friend functions:-
+    1. Friend functions are not in the scope of the class.
+    2. Since friend functions are not a part of the class, it cannot be called by any objects of the class.
+    3. Can be invoked without the help of any objects.
+    4. Usually contains the objects of the class as arguments.
+    5. Can be declared in the public or private section of the class, it doesn't matter.
+    6. It cannot access the members of the class directly, requires objects to do so.
+
+```
+    class Complex
+    {
+        int a, b;
+
+        public:
+            // Declaring friend function in the class.
+            friend Complex sumComplex(Complex o1, Complex o2);
+
+            void setNumber(int n1, int n2){
+                a = n1;
+                b = n2;
+            }
+            void printNumber(){
+                cout << "Your complex number is: " << a << 
+                        " + " << b << "i" << endl;
+            }
+    };
+
+    // Defining the friend function that was declared in the class
+    Complex sumComplex(Complex o1, Complex o2){
+        Complex o3;
+        o3.setNumber((o1.a + o2.a), (o1.b + o2.b));
+        return o3;
+    }
+
+```
+- In the above example, sumComplex is the friend function for class Complex and it can access the private members of the Complex class by using objects.
+
+***
+
+## **Friend Class & Member Friend Functions**
+
+- Friend class is a class that can access all the private data of the class that it is friend of.
+- So if Class A is a friend of Class B then, A can access all private members of B.
+- To create friend class/member friend functions we need to do some steps:-
+    - The compiler reads from top to bottom so if a class type is used in another class the compiler won't find it since one class will be written below the other
+    - To fix this we need to do 2 things:-
+        1. Forward declaration: declare the other class before writing the logic of the class that uses this class type.
+        2. Declare the member function that will use the class type in the other class but define it after both classes are defined.
+
+```
+    // Forward declaration
+    class Complex;
+
+    class Calculator
+    {
+    public:
+        // Declare add real complex function to define it later
+        on after complex class is created.
+        int addRealComplex(Complex, Complex);
+        int addCompComplex(Complex, Complex);
+
+        int add(int a, int b)
+        {
+            return (a + b);
+        }
+    };
+
+    class Complex
+    {
+        int a, b;
+        friend int Calculator ::addRealComplex(Complex o1, Complex o2);
+        friend int Calculator ::addCompComplex(Complex o1, Complex o2);
+
+    public:
+        void setNumber(int n1, int n2)
+        {
+            a = n1;
+            b = n2;
+        }
+
+        void printNumber(void)
+        {
+            cout << a << " + " << b << "i" << endl;
+        }
+    };
+
+    // Creating this member function outside the class after complex class is defined.
+    int Calculator ::addRealComplex(Complex o1, Complex o2)
+    {
+        return (o1.a + o2.a);
+    }
+
+    int Calculator ::addCompComplex(Complex o1, Complex o2)
+    {
+        return (o1.b + o2.b);
+    }
+
+```
+- In the above example, the Calculator class will use the complex class objects so we declare the Complex class first.
+- Then we define the Calculator class and use the Complex class as data types and/or parameters of member functions.
+- After that we write the Complex class and then add the Calculator class member functions as friends inside the Complex class.
+- If we had defined the Complex class first (instead of just declaring), then we would not be able to add the Calculator class member functions as friends inside the Complex class as reading from top to bottom, the complier will not find the Calculator class.
